@@ -96,11 +96,7 @@ body {
   border-radius: 50%;
 }
 
-.rating-button:hover {
-  background-color: var(--color-orange);
-  color: var(--color-dark-grey);
-}
-
+.rating-button:hover,
 .rating-button:focus-visible {
   background-color: var(--color-orange);
   color: var(--color-dark-grey);
@@ -108,6 +104,11 @@ body {
 
 .rating-selected {
   background-color: var(--color-white);
+  color: var(--color-dark-grey);
+}
+
+.rating-selected:hover {
+  background-color: var(--color-orange);
   color: var(--color-dark-grey);
 }
 
