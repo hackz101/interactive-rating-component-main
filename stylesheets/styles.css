@@ -6,6 +6,7 @@
   --color-dark-grey: hsl(216, 12%, 8%);
   --color-grey: hsl(213, 19%, 18%);
   --color-light-grey: hsl(217, 12%, 63%);
+  --color-gradient: radial-gradient(circle at center, #232A34, #181E27);
 
   --ff-main: "Overpass", sans-serif;
 
@@ -39,32 +40,60 @@ body {
 }
 
 .card {
-  background-color: var(--color-grey);
-  padding: 1.5rem;
+  background-image: var(--color-gradient);
+  padding: 2rem;
+  max-width: 21rem;
+  border-radius: 1.5rem;
 }
 
 /*content styles*/
+/*rating page styles*/
+.star-image {
+  display: block;
+  background-color: var(--color-grey);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
 .question-header {
   font-size: var(--fs-rating-heading);
   font-weight: var(--fw-bold);
   line-height: 2.1875rem;
   letter-spacing: 0px;
   color: var(--color-white);
+  margin: 0;
 }
 
 .question-description {
   font-size: var(--fs-rating-descrip);
   line-height: 1.5rem;
-  letter-spacing: 0px;;
+  letter-spacing: 0px;
   color: var(--color-light-grey);
+  margin: 1rem 0;
+}
+
+.rating-button-group {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .rating-button-group span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: var(--fs-rating-button);
   font-weight: var(--fw-bold);
   line-height: 1.5rem;
   letter-spacing: 0px;
+  background-color: var(--color-grey);
   color: var(--color-light-grey);
+  aspect-ratio: 1 / 1;
+  padding: 0.75rem;
+  border-radius: 50%;
 }
 
 .submit-button {
@@ -74,6 +103,54 @@ body {
   letter-spacing: 0.010625rem;
   background-color: var(--color-orange);
   color: var(--color-dark-grey);
+  border: none;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+}
+
+/*thank you page styles*/
+.thanks-section-padded {
+  padding: 2.5rem 2rem;
+}
+
+.thank-you-section {
+  text-align: center;
+}
+
+.thank-you-image {
+  margin-bottom: 2rem;
+}
+
+.rating-tag {
+  display: inline-block;
+  font-size: var(--fs-thanks-rating);
+  line-height: 1.5rem;
+  letter-spacing: 0px;
+  background-color: var(--color-grey);
+  color: var(--color-orange);
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding: 0.25rem 1rem;
+  border-radius: 1.5rem;
+}
+
+.thank-you-header {
+  font-size: var(--fs-thanks-heading);
+  font-weight: var(--fw-bold);
+  line-height: 2.1875rem;
+  letter-spacing: 0px;
+  color: var(--color-white);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.thank-you-description {
+  font-size: var(--fs-thanks-descrip);
+  line-height: 1.5rem;
+  letter-spacing: 0px;
+  color: var(--color-light-grey);
+  margin: 0;
 }
 
 /*footer styles*/

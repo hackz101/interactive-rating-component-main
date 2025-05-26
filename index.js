@@ -12,7 +12,7 @@ document.querySelector('.js-submit-button')
 
       <p class="rating-tag">You selected ${rating} out of 5</p>
       
-      <h1 class="thank-you-heaer">Thank you!</h1>
+      <h1 class="thank-you-header">Thank you!</h1>
 
       <p class="thank-you-description">
         We appreciate you taking the time to give a rating. If you ever need more support, 
@@ -20,4 +20,6 @@ document.querySelector('.js-submit-button')
       </p>
     </section>
     `);
+
+    card.classList.toggle('thanks-section-padded');
   });
