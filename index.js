@@ -27,21 +27,33 @@ document.querySelector('.js-submit-button')
 
 /*handle rating selection*/
 document.querySelectorAll('.rating-button').forEach((ratingButton, index) => {
+  //click
   ratingButton.addEventListener('click', () => {
-    const isActive = ratingButton.classList.contains('rating-selected');
+    chooseRating(ratingButton, index);
+  });
 
-    if (!isActive) {
-      const previousSelection = document.querySelector('.rating-selected');
-
-      //remove previous selected
-      if (previousSelection !== null) {
-        previousSelection.classList.remove('rating-selected');
-      }
-
-      //select new one
-      ratingButton.classList.toggle('rating-selected');
-      rating = index + 1;
-      console.log(rating);
+  //enter
+  ratingButton.addEventListener('keyup', (event) => {
+    if (document.activeElement === ratingButton && event.key === 'Enter') {
+      chooseRating(ratingButton, index);
     }
   });
 });
+
+/*function to call on click or keyup Enter*/
+function chooseRating(ratingButton, index) {
+  const isActive = ratingButton.classList.contains('rating-selected');
+
+  if (!isActive) {
+    const previousSelection = document.querySelector('.rating-selected');
+
+    //remove previous selected
+    if (previousSelection !== null) {
+      previousSelection.classList.remove('rating-selected');
+    }
+
+    //select new one
+    ratingButton.classList.toggle('rating-selected');
+    rating = index + 1;
+  }
+}

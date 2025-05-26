@@ -81,6 +81,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/*rating button styles*/
 .rating-button {
   display: flex;
   align-items: center;
@@ -97,6 +98,11 @@ body {
 }
 
 .rating-button:hover {
+  background-color: var(--color-orange);
+  color: var(--color-dark-grey);
+}
+
+.rating-button:focus-visible {
   background-color: var(--color-orange);
   color: var(--color-dark-grey);
 }
@@ -118,6 +124,16 @@ body {
   padding: 0.5rem;
   border-radius: 1.5rem;
   transition: background-color 0.15s, color 0.15s;
+}
+
+.submit-button:hover {
+  background-color: var(--color-white);
+  color: var(--color-dark-grey)
+}
+
+.submit-button:focus {
+  background-color: var(--color-white);
+  color: var(--color-dark-grey)
 }
 
 /*thank you page styles*/
