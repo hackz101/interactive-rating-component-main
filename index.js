@@ -2,6 +2,7 @@ let rating;
 
 const card = document.querySelector('.card');
 
+/*handle submit button*/
 document.querySelector('.js-submit-button')
   .addEventListener('click', () => {
     card.removeChild(card.querySelector('.rating-section'));
@@ -23,3 +24,24 @@ document.querySelector('.js-submit-button')
 
     card.classList.toggle('thanks-section-padded');
   });
+
+/*handle rating selection*/
+document.querySelectorAll('.rating-button').forEach((ratingButton, index) => {
+  ratingButton.addEventListener('click', () => {
+    const isActive = ratingButton.classList.contains('rating-selected');
+
+    if (!isActive) {
+      const previousSelection = document.querySelector('.rating-selected');
+
+      //remove previous selected
+      if (previousSelection !== null) {
+        previousSelection.classList.remove('rating-selected');
+      }
+
+      //select new one
+      ratingButton.classList.toggle('rating-selected');
+      rating = index + 1;
+      console.log(rating);
+    }
+  });
+});

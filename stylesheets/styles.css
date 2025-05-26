@@ -81,7 +81,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.rating-button-group span {
+.rating-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +96,16 @@ body {
   border-radius: 50%;
 }
 
+.rating-button:hover {
+  background-color: var(--color-orange);
+  color: var(--color-dark-grey);
+}
+
+.rating-selected {
+  background-color: var(--color-white);
+  color: var(--color-dark-grey);
+}
+
 .submit-button {
   font-size: var(--fs-rating-button);
   font-weight: var(--fw-bold);
@@ -107,6 +117,7 @@ body {
   width: 100%;
   padding: 0.5rem;
   border-radius: 1.5rem;
+  transition: background-color 0.15s, color 0.15s;
 }
 
 /*thank you page styles*/
