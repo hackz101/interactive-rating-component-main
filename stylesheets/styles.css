@@ -1,5 +1,86 @@
+/*configs*/
+:root {
+  --color-white: hsl(0, 100%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-orange: hsl(25, 97%, 53%);
+  --color-dark-grey: hsl(216, 12%, 8%);
+  --color-grey: hsl(213, 19%, 18%);
+  --color-light-grey: hsl(217, 12%, 63%);
 
+  --ff-main: "Overpass", sans-serif;
 
-/*default footer tyling*/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+  --fs-rating-heading: 1.75rem;
+  --fs-rating-descrip: 0.9375rem;
+  --fs-rating-number: 1rem;
+  --fs-rating-button: 0.875rem;
+
+  --fs-thanks-rating: 0.9375rem;
+  --fs-thanks-heading: 1.75rem;
+  --fs-thanks-descrip: 0.9375rem;
+
+  --fw-main: 400;
+  --fw-bold: 700;
+
+  box-sizing: border-box;
+}
+
+/*layout styles*/
+body {
+  font-family: var(--ff-main);
+  font-size: 1rem;
+  font-weight: var(--fw-main);
+  background-color: var(--color-dark-grey);
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+}
+
+.card {
+  background-color: var(--color-grey);
+  padding: 1.5rem;
+}
+
+/*content styles*/
+.question-header {
+  font-size: var(--fs-rating-heading);
+  font-weight: var(--fw-bold);
+  line-height: 2.1875rem;
+  letter-spacing: 0px;
+  color: var(--color-white);
+}
+
+.question-description {
+  font-size: var(--fs-rating-descrip);
+  line-height: 1.5rem;
+  letter-spacing: 0px;;
+  color: var(--color-light-grey);
+}
+
+.rating-button-group span {
+  font-size: var(--fs-rating-button);
+  font-weight: var(--fw-bold);
+  line-height: 1.5rem;
+  letter-spacing: 0px;
+  color: var(--color-light-grey);
+}
+
+.submit-button {
+  font-size: var(--fs-rating-button);
+  font-weight: var(--fw-bold);
+  line-height: 1.5rem;
+  letter-spacing: 0.010625rem;
+  background-color: var(--color-orange);
+  color: var(--color-dark-grey);
+}
+
+/*footer styles*/
+.attribution {
+  font-size: 11px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.attribution a { color: var(--color-orange) }
