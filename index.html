@@ -5,38 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/stylesheets/normalize.css">
+  <link rel="stylesheet" href="stylesheets/styles.css">
   
   <title>Frontend Mentor | Interactive rating component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <div class="container">
+    <main class="card">
+      <!-- Rating state start -->
 
-  <!-- Rating state start -->
+      <section class="ration-section">
 
-  How did we do?
+        <img src="/images/icon-star.svg" alt="Star" class="star-image">
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+        <h1 class="question-header">How did we do?</h1>
+        <p class="question-description">
+          Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!
+        </p>
 
-  1 2 3 4 5
+        <div class="rating-button-group">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+        </div>
 
-  Submit
+        <button class="submit-button">SUBMIT</button>
+      </section>
 
-  <!-- Rating state end -->
+      <!-- Rating state end -->
+    </main>
+  </div>
 
   <!-- Thank you state start -->
 
-  You selected <!-- Add rating here --> out of 5
+  <section class="thank-you-section">
+    <img src="/images/illustration-thank-you.svg" alt="Thank You Image" class="thank-you-image">
 
-  Thank you!
+    <p class="rating-tag">You selected <!-- Add rating here --> out of 5</p>
+    
+    <h1 class="thank-you-heaer">Thank you!</h1>
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+    <p class="thank-you-description">
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!
+    </p>
+  </section>
 
   <!-- Thank you state end -->
 
