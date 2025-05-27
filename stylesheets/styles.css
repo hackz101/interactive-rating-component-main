@@ -44,6 +44,7 @@ body {
   padding: 2rem;
   max-width: 21rem;
   border-radius: 1.5rem;
+  transition: height 5s;
 }
 
 .hidden {
@@ -58,6 +59,7 @@ body {
   padding: 1rem;
   border-radius: 50%;
   margin-bottom: 2rem;
+  max-width: 100%;
 }
 
 .question-header {
@@ -151,6 +153,7 @@ body {
 
 .thank-you-image {
   margin-bottom: 2rem;
+  max-width: 100%;
 }
 
 .rating-tag {

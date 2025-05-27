@@ -1,17 +1,23 @@
 let rating;
 
 const card = document.querySelector('.card');
+const submitButton = document.querySelector('.js-submit-button');
 
 /*handle submit button*/
-document.querySelector('.js-submit-button')
-  .addEventListener('click', () => {
+submitButton.addEventListener('click', () => {
+  const selectedRating = card.querySelector('.rating-selected');
+
+  if (selectedRating !== null) {
     card.querySelector('.thank-you-section').classList.remove('hidden');
     card.querySelector('.rating-section').classList.add('hidden');
 
     card.querySelector('.rating-tag').innerText = `You selected ${rating} out of 5`;
 
     card.classList.toggle('thanks-section-padded');
-  });
+  } else {
+    submitButton.blur();
+  }
+});
 
 /*handle rating selection*/
 document.querySelectorAll('.rating-button').forEach((ratingButton, index) => {
