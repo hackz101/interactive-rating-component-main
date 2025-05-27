@@ -46,6 +46,10 @@ body {
   border-radius: 1.5rem;
 }
 
+.hidden {
+  display: none;
+}
+
 /*content styles*/
 /*rating page styles*/
 .star-image {
